@@ -1,0 +1,29 @@
+:root{
+    --primary:#00b0ff;
+    --secondary:#1cd459;
+    --danger:#d44646;
+    --bg:#f1f1f1;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+h1{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -20;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  background-color: var(--primary);
+}
+a{
+  position: absolute;
+  z-index: 10;
+  color: white;
+  background-color: white;
+  padding: .5em;
+  text-decoration: none;
+  font-size: 1em;
+}
