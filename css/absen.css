@@ -18,7 +18,7 @@ h1{
   text-align: center;
   background-color: var(--primary);
 }
-a{
+.back{
   position: absolute;
   z-index: 10;
   color: white;
@@ -26,4 +26,53 @@ a{
   padding: .5em;
   text-decoration: none;
   font-size: 1em;
+}
+.container{
+  display: block;
+  margin: 40% auto 0 auto;
+  width: 100%;
+  max-width: 480px;
+  padding-bottom: 1em;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+table,th,td{
+  border: 2px solid black;
+  padding: .3em .4em;
+}
+th{
+  background-color: var(--bg);
+}
+td button{
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: .4em 1em;
+  margin: .2em auto;
+}
+td .edit {
+  background-color: var(--secondary);
+}
+td .hapus {
+  background-color: var(--danger);
+}
+.opsi{
+  display: inline-block;
+  margin:0 1em;
+}
+.bawah{
+  display: block;
+  margin: 1em auto;
+  text-align: center;
+}
+.tambah{
+  padding: .5em 1em;
+  background-color: var(--secondary);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
 }

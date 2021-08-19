@@ -1,7 +1,7 @@
 
 function handleHapus() {
   const id = this.dataset.hapus
-   // alert(this.dataset.hapus)
+   alert(this.dataset.hapus)
   document.querySelector(".popper")
   .style.transform = "scale(1)"
  let tombolHapus = document.querySelector(".hapus")
