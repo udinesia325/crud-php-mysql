@@ -40,8 +40,11 @@ $sqlKelas = query("select * from kelas where nama_kelas = '$kelas'");
             <td><?=strtoupper($data["kelamin"])?></td>
             <td><?=$data["daftar"]?></td>
             <td>
-              <button class="edit">Edit</button>
-              <button class="hapus" data-hapus="<?=$data["id"]?>">Hapus</button>
+              <a class="edit" href="ubahSiswa.php?id=<?=$data["id"]?>&kelas=<?=$data["nama_kelas"]?>">Edit</a>
+              <button class="hapus"
+                data-hapus="<?=$data["id"]?>"
+                data-kelas="<?=$data["nama_kelas"]?>"
+              >Hapus</button>
               </td>
           </tr>
           <?endwhile;?>
@@ -51,8 +54,11 @@ $sqlKelas = query("select * from kelas where nama_kelas = '$kelas'");
       
         <a class="opsi tambah"
 href="tambahSiswa.php?kelas=<?=$kelas?>">Tambah Siswa</a>
+    <?while($data_cetak = mysqli_fetch_assoc($sqlKelas):?>
         <a class="opsi cetak"
-href="tambahSiswa.php?kelas=<?=$kelas?>">Cetak Absen</a>
+href="cetakSiswa.php?kelas=<?=$data_cetak["nama_kelas"]?>&wali=<?=$data_cetak["wali_kelasv"]?>">Cetak Absen</a>
+    <?endwhile;?>
     </div>
+    <script src="absen.js"></script>
   </body>
 </html>

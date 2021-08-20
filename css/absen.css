@@ -41,7 +41,7 @@ table{
 }
 table,th,td{
   border: 2px solid black;
-  padding: .3em .4em;
+  padding: .4em .4em;
 }
 th{
   background-color: var(--bg);
@@ -55,6 +55,12 @@ td button{
 }
 td .edit {
   background-color: var(--secondary);
+  padding: .3em 1em;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 2px auto;
 }
 td .hapus {
   background-color: var(--danger);
