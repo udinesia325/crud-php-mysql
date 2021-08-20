@@ -7,6 +7,7 @@ if(!isset($_GET["kelas"])){
 $kelas = $_GET["kelas"];
 $sql = query("select * from siswa where nama_kelas = '$kelas'");
 $sqlKelas = query("select * from kelas where nama_kelas = '$kelas'");
+$data_kelas = mysqli_fetch_assoc($sqlKelas);
 ?>
 
 <html>
@@ -54,10 +55,8 @@ $sqlKelas = query("select * from kelas where nama_kelas = '$kelas'");
       
         <a class="opsi tambah"
 href="tambahSiswa.php?kelas=<?=$kelas?>">Tambah Siswa</a>
-    <?while($data_cetak = mysqli_fetch_assoc($sqlKelas):?>
         <a class="opsi cetak"
-href="cetakSiswa.php?kelas=<?=$data_cetak["nama_kelas"]?>&wali=<?=$data_cetak["wali_kelasv"]?>">Cetak Absen</a>
-    <?endwhile;?>
+href="cetakSiswa.php?kelas=<?=$data_kelas["nama_kelas"]?>&wali=<?=$data_kelas["wali_kelas"]?>">Cetak Absen</a>
     </div>
     <script src="absen.js"></script>
   </body>
