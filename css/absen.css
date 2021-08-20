@@ -61,9 +61,14 @@ td .edit {
   text-decoration: none;
   border-radius: 10px;
   margin: 2px auto;
+  display: inline-block;
+}
+td a{
+  display: inline-block;
 }
 td .hapus {
   background-color: var(--danger);
+  display: inline-block;
 }
 .opsi{
   display: inline-block;
@@ -80,5 +85,13 @@ td .hapus {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  border-radius: 10px;
+}
+.cetak{
+  padding: .5em 1em;
+  background-color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
   border-radius: 10px;
 }

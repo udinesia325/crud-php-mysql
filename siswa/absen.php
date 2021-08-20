@@ -20,10 +20,8 @@ $data_kelas = mysqli_fetch_assoc($sqlKelas);
     <a href="../index.php" class="back">🔙</a>
   <br>
    <div class="container">
-     <?while($kls = mysqli_fetch_assoc($sqlKelas)):?>
-     <p><b>Kelas : </b><?= strtoupper($kls["nama_kelas"])?></p>
-     <p><b>Wali Kelas : </b><?= strtoupper($kls["wali_kelas"])?></p>
-     <?endwhile;?>
+     <p><b>Kelas : </b><?= strtoupper($data_kelas["nama_kelas"])?></p>
+     <p><b>Wali Kelas : </b><?= strtoupper($data_kelas["wali_kelas"])?></p>
         <table>
           <tr>
             <thead>

@@ -15,12 +15,23 @@
   $data_siswa = query("select nama from siswa where nama_kelas= '$kelas' ");
   $colHari = "";
 
-  for ($i = 0; $i <=31; $i++) {
+  for ($i = 1; $i <=31; $i++) {
      $colHari .="<th>$i</th>";
   }
   $data = "
   <html>
     <head>
+      <style>
+        table{
+          border-collapse:collapse;
+        }
+        th{
+          background-color:#ddd;
+        }
+        table,th,td{
+          padding:.5em;
+        }
+      </style>
     </head>
     <body>
     ";
@@ -39,7 +50,7 @@
     while($row = mysqli_fetch_assoc($data_siswa)){
      $nama = $row["nama"];
      $rowHari = "";
-     for ($j = 0; $j <=31; $j++) {
+     for ($j = 1; $j <=31; $j++) {
         $rowHari .="<td></td>";
      }
    $data .=" <tr>
